@@ -12,7 +12,7 @@ matplotlib.use('TkAgg',force=True)
 from matplotlib import pyplot as plt
 
 print('Hello! Welcome to the Sun Sight Reduction Program made by Harry Leung at the CCGC. Please follow the instructions below to get started.')
-print('Version 1.0.0' + "\n")
+print('Version 1.0.1' + "\n")
 
 sight_year = int(input('Enter the Sight Year: '))
 sight_month = int(input('Enter the Sight Month: (1-12) '))
@@ -140,9 +140,9 @@ elif C_Sign == "North" and t_Sign == "West":
     Azimuth = 360 - Q_Azimuth
 
 print("")
-print("A = " + str(a))
-print("B = " + str(b))
-print("C = " + str(c))
+print("A = " + str(abs(a)) + str(" ") + A_Sign)
+print("B = " + str(abs(b)) +  str(" ") + B_Sign)
+print("C = " + str(abs(c))+  str(" ") + C_Sign)
 print("Azimuth = " + str(C_Sign) + " " + str(round(Q_Azimuth,2)) + " " +str(t_Sign) )
 print("")
 print("The True Azimuth is " + str(round(Azimuth,2)) + "°T")
@@ -213,16 +213,16 @@ D_Lat = Distance * math.cos(math.radians(Initial_course))
 M_Lat = Initial_lat + D_Lat / 2
 Departure = Distance * math.sin(math.radians(Initial_course))
 D_Long = Departure / math.cos(M_Lat * math.pi / 10800)
-if Initial_course>0 and Initial_course<90:
+if Initial_course>=0 and Initial_course<=90:
     Final_lat = Initial_lat + abs(D_Lat)
     Final_long = Initial_long - abs(D_Long)
-if Initial_course>90 and Initial_course<180:
+if Initial_course>90 and Initial_course<=180:
     Final_lat = Initial_lat - abs(D_Lat)
     Final_long = Initial_long - D_Long
-if Initial_course>180 and Initial_course<270:
+if Initial_course>180 and Initial_course<=270:
     Final_lat = Initial_lat - abs(D_Lat)
     Final_long = Initial_long + abs(D_Long)
-if Initial_course > 270 and Initial_course < 360:
+if Initial_course > 270 and Initial_course <= 360:
     Final_lat = Initial_lat + abs(D_Lat)
     Final_long = Initial_long + abs(D_Long)
 if Final_lat > 0:
@@ -350,9 +350,9 @@ elif C_Sign_2 == "North" and t_Sign_2 == "West":
     Azimuth_2 = 360 - Q_Azimuth_2
 
 print("")
-print("A = " + str(a_2))
-print("B = " + str(b_2))
-print("C = " + str(c_2))
+print("A = " + str(abs(a_2)) + str(" ") + A_Sign_2)
+print("B = " + str(abs(b_2)) +  str(" ") + B_Sign_2)
+print("C = " + str(abs(c_2))+  str(" ") + C_Sign_2)
 print("Azimuth = " + str(C_Sign_2) + " " + str(round(Q_Azimuth_2,2)) + " " +str(t_Sign_2))
 print("")
 print("The True Azimuth is " + str(round(Azimuth_2,2)) + "°T")
@@ -510,3 +510,4 @@ plt.show()
 input()
 
 #recent to Nov 16.
+
