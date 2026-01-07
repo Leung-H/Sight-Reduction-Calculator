@@ -2,7 +2,7 @@
 
 Welcome to my Sight Reduction Calculator based on the Marc. St-Hilare Method for the Sun.
 
-To get started, download the program from the "Projects" Tab and launch the program as adminstrator.<br>
+To get started, download the program from the "Releases" Tab and launch the program as adminstrator.<br>
 
 <img width="471" height="406" alt="image" src="https://github.com/user-attachments/assets/dd6afc3a-6790-4da1-b15b-4ae96f658a01" />
 
